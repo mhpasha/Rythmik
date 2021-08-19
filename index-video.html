@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rythmik</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+	<div class="right-sidebar">
+		<a href="index.html" class="logo">			
+			<img src="logo.png">
+		</a>
+		<div class="side-menu">
+			<span class="head-title">منو</span>
+			<ul>
+				<li class="active main">
+					<a href="./index.html">
+						<i class="ri-home-5-fill"></i>
+						<span>صفحه اصلی</span>
+					</a>
+				</li>
+				<li class="main-responsive" onclick="main_drodown_toggle(this)">
+					<i class="ri-home-5-fill"></i>
+					<span>صفحه اصلی</span>
+					<ul class="res-ul display-none">
+						<li>
+							<a href="index.html">موزیک</a>
+						</li>
+						<li>
+							<a href="playlist.html">پلی لیست</a>
+						</li>
+						<li>
+							<a href="padcast.html">پادکست</a>
+						</li>
+						<li class="active">
+							<a href="index-video.html">ویدیو</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="search.html">
+						<i class="ri-search-2-fill"></i>
+						<span>جستجو</span>
+					</a>
+				</li>
+				<li>
+					<a href="./artists.html">
+						<i class="ri-user-4-fill"></i>
+						<span>هنرمندان</span>
+					</a>
+				</li>
+				<li>
+					<a href="albums.html">
+						<i class="ri-album-fill"></i>
+						<span>آلبوم ها</span>
+					</a>
+				</li>
+				<li>
+					<a href="stories.html">
+						<i class="ri-star-smile-fill"></i>
+						<span>استوری ها</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="side-menu">
+			<span class="head-title">کتابخانه</span>
+			<ul>
+				<li>
+					<a href="released.html">
+						<i class="ri-time-fill"></i>
+						<span>اخیرا پخش شده</span>
+					</a>
+				</li>
+				<li>
+					<a href="favariot.html">
+						<i class="ri-heart-2-fill"></i>
+						<span>مورد علاقه</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="side-menu">
+			<span class="head-title">پلی لیست</span>
+			<ul>
+				<li onclick="toggle_add_play_list_box()">
+					<i class="ri-add-box-fill"></i>
+					<span>پلی لیست جدید</span>
+				</li>
+				<li>
+					<a href="my-platlist.html">
+						<i class="ri-play-list-line"></i>
+						<span>پلی لیست های من</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		
+	</div>
+		<div class="p-list-edit-box add-playlist display-none">
+		<div class="edit-box center">
+			<div class="img">
+				<i class="ri-play-list-line center"></i>
+			</div>
+			<div class="head">ساخت پلی لیست جدید</div>
+			<form>
+				<input type="text" name="" value="" placeholder="نام پلی لیست را وارد کنید">
+				<button type="submit">ساخت پلی لیست</button>
+			</form>
+				<button  onclick="toggle_edit_play_list_box()">بستن پنجره</button>
+		</div>
+	</div>
+
+
+	<div class="left-body">
+		<div class="header">
+			<ul>
+				<li class="menu-toggle" onclick="toggle_right_sidebar()">
+					<i class="ri-menu-fill"></i>
+				</li>
+
+				<li>
+					<a href="index.html">موزیک</a>
+				</li>
+				<li>
+					<a href="playlist.html">پلی لیست</a>
+				</li>
+				<li>
+					<a href="padcast.html">پادکست</a>
+				</li>
+				<li class="active">
+					<a href="index-video.html">ویدیو</a>
+				</li>
+			</ul>
+			<div class="user" onclick="user_dropdown(this)">
+				<div class="img">
+					<img class="vertical-center" src="https://user-images.githubusercontent.com/88739232/129447237-db1829ff-0fa0-424d-9135-1688058cb735.jpg">
+				</div>
+				<span class="vertical-center">محسن پاشازاده</span>
+				<i class="ri-arrow-down-s-line vertical-center"></i>
+				<div class="user-drop-down display-none">
+					<div class="btn">
+						<a href="profile-edit.html">
+							<i class="ri-settings-3-fill"></i>
+							<span>تنظیمات</span>
+						</a>
+					</div>
+					<div class="btn">
+						<i class="ri-logout-box-r-fill"></i>
+						<span>خروج از حساب</span>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="login-btn">
+				<a href="login.html" class="center">ورود / ثبت نام</a>
+			</div> -->
+		</div>
+
+		<div class="music-list">
+			<div class="container" style="height: 100%;">
+				<div class="head">
+					<div class="name">اخیرا تماشا کرده اید</div>
+					<a class="continue" href="">
+						<span>نمایش همه</span>
+						<i class="ri-arrow-left-circle-fill"></i>
+					</a>
+				</div>
+
+				<div class="list">
+					<div class="music">
+						<a>
+							<img>
+						</a>
+						<div class="info-bar">
+							<div class="name"></div>
+							<div class="singer"></div>
+							<div class="play play-video top-center">
+								<i class="ri-play-fill center"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<div class="music-list video-list"></div>	
+
+		<div class="music-list">
+			<div class="container" style="height: 100%;">
+				<div class="head">
+					<div class="name">از هنرمندانی که دنبال می کنید</div>
+					<a class="continue" href="">
+						<span>نمایش همه</span>
+						<i class="ri-arrow-left-circle-fill"></i>
+					</a>
+				</div>
+
+				<div class="list">
+					<div class="music">
+						<a>
+							<img>
+						</a>
+						<div class="info-bar">
+							<div class="name"></div>
+							<div class="singer"></div>
+							<div class="play play-video top-center">
+								<i class="ri-play-fill center"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="music-list2">
+			<div class="container">
+				<div class="head">
+					<div class="name">محبوب ترین های این ماه</div>
+					<a class="continue" href="">
+						<span>نمایش همه</span>
+						<i class="ri-arrow-left-circle-fill"></i>
+					</a>
+				</div>
+				<div class="list">
+					<ul>
+						<li class="music">
+							<div class="img">
+								<img>
+							</div>
+							<div class="info-bar">
+								<div class="info-holder">
+									<div class="name"></div>
+									<div class="singer"></div>
+								</div>
+								<div class="left">
+									<div class="play play-video">
+										<i class="ri-play-fill center"></i>
+									</div>
+									<div class="add-list" onclick="add_music_play_list(this)">
+										<i class="ri-add-box-fill center"></i>
+										<div class="add-list-box center display-none">
+											<div class="boxx">
+												<i class="ri-play-list-fill"></i>
+												<span>پلی لیست 01</span>
+											</div>
+											<div class="boxx">
+												<i class="ri-play-list-fill"></i>
+												<span>پلی لیست 02</span>
+											</div>
+											<div class="boxx">
+												<i class="ri-play-list-fill"></i>
+												<span>پلی لیست 03</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>	
+
+				</div>
+			</div>
+		</div>
+
+		<div class="music-list"></div>
+
+		<div class="story-list">
+			<div class="container">
+				<div class="head">
+					<div class="name">از هنرمندان جدید و تازه کار</div>
+					<a class="continue" href="">
+						<span>نمایش همه</span>
+						<i class="ri-arrow-left-circle-fill"></i>
+					</a>
+				</div>
+				<div class="list">
+					<a class="story">
+						<img>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-links">
+					<a href="download-app.html">دریافت اپ ریتمیک</a>
+					<a href="http://instagram.com">اینستاگرام</a>
+					<a href="roles.html">قوانین</a>
+					<a href="privacy.html">حریم خصوصی</a>
+					<a href="call-us.html">تماس با ما</a>
+					<a href="about-us.html">درباره ما</a>
+				</div>
+				<div class="footer-cw">
+					<div class="line">
+						© 2021 by Rythmik. All Rights Reserved.
+					</div>
+					<div class="line">
+						The largest source of Persian entertainment providing the best Persian and Iranian music 24/7.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="fixed-video-play display-none">
+		<a href="">
+			
+		</a>
+		<div class="exit-btn" onclick="exit_fixed_video()">
+			<i class="center ri-close-fill"></i>
+		</div>
+	</div>
+
+	<div class="music-player display-none">
+	  <div class="timeline">
+	    <div class="progress">
+		<div class="test"></div>
+		    <span id="time">
+		    	<div class="time">
+			      <div class="current">0:00</div>
+			      <div class="divider">/</div>
+			      <div class="length"></div>
+		    	</div>
+		    </span>
+	    </div>
+	  </div>
+		<div class="audio-player" style="margin: 0 auto">
+			<div class="container">
+					<div class="music-detail">
+						<div class="img vertical-center">
+							<i class="ri-music-fill center"></i>
+							<img class="" src="">
+						</div>
+						<div class="info-holder vertical-center">
+						    <div class="name">Unknown</div>
+						    <div class="singer">Unknown</div>
+						</div>
+					</div>
+				  <div class="controls">
+				    <div class="buttons-container center">
+				      <div class="vertical-center button" onclick="change_music('shuffle')">
+				      	<i class="ri-shuffle-line center"></i>
+				      </div>
+				      <div class="vertical-center button" onclick="change_music('next')">
+				      	<i class="ri-skip-forward-fill center"></i>
+				      </div>
+				      <div class="toggle-play play vertical-center button" onclick="toggle_play_music(this)">
+				      	<i class="ri-play-fill center"></i>
+				      </div>
+				      <div class="vertical-center button" onclick="change_music('previous')">
+						<i class="ri-skip-back-fill center"></i>
+				      </div>
+				      <div class="vertical-center button repeat-btn" onclick="toggle_repeat(this)">
+				      	<i class="ri-repeat-2-line center"></i>
+				      </div>
+				    </div>
+				    
+				  </div>
+				    <div class="volume-box vertical-center">
+				    	<div class="holder vertical-center icon-holder" onclick="volume_toggle(this)">
+					    	<i class="ri-volume-up-fill center"></i>
+				    	</div>
+				    	<div class="holder vertical-center range-holder">
+			  				<input type="range" min="0" max="100" value="100">
+				    	</div>
+				    	<div class="holder vertical-center">
+			  				<p>100</p>
+				    	</div>
+				    </div>
+				</div>
+		</div>
+		<div class="audio-player responsive-audio-player" style="margin: 0 auto">
+			<div class="container">
+					<div class="music-detail">
+						<div class="img vertical-center">
+							<i class="ri-music-fill center"></i>
+							<img class="" src="">							
+						</div>
+						<div class="info-holder vertical-center">
+						    <div class="name">Unknown</div>
+						    <div class="singer">Unknown</div>
+						</div>
+					</div>
+				  <div class="controls">
+				    <div class="buttons-container center">
+				      <div class="vertical-center button" onclick="change_music('shuffle')">
+				      	<i class="ri-shuffle-line center"></i>
+				      </div>
+				      <div class="vertical-center button" onclick="change_music('next')">
+				      	<i class="ri-skip-forward-fill center"></i>
+				      </div>
+				      <div class="toggle-play play vertical-center button" onclick="toggle_play_music(this)">
+				      	<i class="ri-play-fill center"></i>
+				      </div>
+				      <div class="vertical-center button" onclick="change_music('previous')">
+						<i class="ri-skip-back-fill center"></i>
+				      </div>
+				      <div class="vertical-center button repeat-btn" onclick="toggle_repeat(this)">
+				      	<i class="ri-repeat-2-line center"></i>
+				      </div>
+				    </div>
+				    
+				  </div>
+				    <div class="volume-box vertical-center">
+				    	<div class="holder vertical-center icon-holder" onclick="volume_toggle(this)">
+					    	<i class="ri-volume-up-fill center"></i>
+				    	</div>
+				    	<div class="holder vertical-center range-holder">
+			  				<input type="range" min="0" max="100" value="100">
+				    	</div>
+				    	<div class="holder vertical-center">
+			  				<p>100</p>	
+				    	</div>
+				    </div>
+				</div>
+		</div>
+	</div>
+	<div class="shadow display-none">
+		<div class="exit" onclick="toggle_right_sidebar()">
+			<i class="ri-close-fill"></i>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	container_data_music_list = 
+	[
+		{'name':'اخیرا گوش کرده‌اید','link':'all.html'},
+		{'name':'جدیدا منتشر شده','link':'all.html'},
+		{'name':'از هنرمندانی جدید و تازه کار','link':'all.html'},
+		{'name':'انتخاب شده برای شما','link':'all.html'},
+	]
+	var data_story_list = 
+	[
+		[
+		{'img':'https://user-images.githubusercontent.com/88739232/129393840-ca10ec82-fe7f-4c8c-8f51-8be83d3c84ca.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393848-a9d67f9a-2a47-454f-9006-39536bf9c499.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393854-c5cf6e33-f7da-40ac-bdfe-fd5c44b1da8d.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393860-81c26212-a999-4f31-9644-106b0adc3c5b.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393863-64d7a306-5859-4449-85c0-0c8d6d32d569.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393872-c6cf20ba-0ae7-4b45-8155-e9653b572f45.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393880-85a1afaa-f1d8-4b44-8e81-15056a70726b.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393885-116ee610-96b0-46bb-869f-4be737641102.png','link':'story.html'},
+		{'img':'https://user-images.githubusercontent.com/88739232/129393893-b63df176-5791-42b7-8ece-9c802c3bff01.png','link':'story.html'},
+		],
+	]
+	var data_music_list = 
+	[
+		[
+			{'name':'Head Candy','singer':'William Rosati','img':'https://user-images.githubusercontent.com/88739232/129390614-27f3636d-f039-4ecc-817e-2311f95cd4e2.png','m_link':'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4','link':'single-video.html'},
+		],
+		[
+			{'name':'Head Candy','singer':'William Rosati','img':'https://user-images.githubusercontent.com/88739232/129390614-27f3636d-f039-4ecc-817e-2311f95cd4e2.png','m_link':'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4','link':'single-video.html'},
+		],
+		[
+			{'name':'Head Candy','singer':'William Rosati','img':'https://user-images.githubusercontent.com/88739232/129390614-27f3636d-f039-4ecc-817e-2311f95cd4e2.png','m_link':'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4','link':'single-video.html'},
+		],
+		[
+			{'name':'Head Candy','singer':'William Rosati','img':'https://user-images.githubusercontent.com/88739232/129390614-27f3636d-f039-4ecc-817e-2311f95cd4e2.png','m_link':'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4','link':'single-video.html'},
+		],
+
+	]
+
+	var data_music_list2 = 
+	[
+		[
+			{'name':'moose','singer':'BenSound','img':'https://user-images.githubusercontent.com/88739232/129390614-27f3636d-f039-4ecc-817e-2311f95cd4e2.png','m_link':'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4','link':'single-video.html'},
+		],
+	]
+	var all_video = [
+		'https://user-images.githubusercontent.com/88739232/129167978-6de55df3-44f3-45a4-b7b5-bbe4ef86946e.mp4',
+	]
+</script>
+
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/miny.js"></script>
+<script type="text/javascript" src="js/player-video.js"></script>
+<script type="text/javascript" src="js/volume.js"></script>
+<script type="text/javascript" src="js/stuff.js"></script>
+</html>

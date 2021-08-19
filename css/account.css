@@ -1,0 +1,224 @@
+@font-face {
+	font-family: "shabnam";
+	src: url("../fonts/Shabnam-FD.ttf");
+}
+body{
+	font-family: shabnam;
+	background:#141316;
+	margin: 0;
+	padding:0; 
+	direction: rtl;
+	padding-top: 30px;
+}
+.overflow-hidden{
+	overflow: hidden;
+}
+.display-none{
+	display: none!important;
+}
+.left{
+	float: left;
+}
+.center{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.top-center {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.container{
+	width: 95%;
+	display: block;
+	margin: auto;
+}
+.account-fixed-box{
+	top: 0;
+	right: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	/*background-image: linear-gradient(73deg, #00000099, #00000099);*/
+	z-index: 1;
+}
+.account-fixed-box .logo{
+	display: inline-block;
+	width: 130px;
+	margin-top: 40px;
+}
+.account-fixed-box .logo img{
+	width: 100%;
+}
+.account-fixed-box .box{
+	width: 35%;
+	padding: 2% 0;
+	background: #17171a;
+	border-radius: 10px;
+	color: #9F9FA0;
+	padding-bottom: .5%;
+}
+.account-fixed-box .box .head,.account-fixed-box .box .text{
+	font-size: 18px;
+	margin: auto;
+	margin-bottom: 50px;
+	text-align: center;
+	color: #fff;
+	width: 80%;
+}
+.account-fixed-box .box .text{
+	margin: auto;
+	margin-top: -30px;
+	margin-bottom: 20px;
+}
+.account-fixed-box .box form{
+	width: 100%;
+	height: 100%;
+}
+.account-fixed-box .box form input,.account-fixed-box .box form button,.account-fixed-box .box .create-account,.account-fixed-box .box form .continue,.account-fixed-box .box form .password-inp{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border:none;
+	font-family: shabnam;
+	font-weight: 900;
+	background: #0F0E11;
+	margin-bottom: 10px;
+	color: #9F9FA0;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.account-fixed-box .box form .continue{
+		position: relative;
+		font-size: 14px;
+}
+.account-fixed-box .box form .continue span{
+	font-size: inherit;
+}
+.account-fixed-box .box form input{
+	width: 98%;
+	padding-right: 2%;
+}
+.account-fixed-box .box form button[type=submit],.account-fixed-box .box form .continue{
+	margin-top: 50px;
+	background-image: linear-gradient(73deg, #a06aff, #5d00ff);
+	color: #fff;
+	cursor: pointer;
+}
+.account-fixed-box .box .name input{
+	display: inline-block;
+	width: 46%;
+}
+.account-fixed-box .box .name input:first-child{
+	margin-left: 3%;
+}
+.account-fixed-box .box .forgot-password{
+	text-decoration: none;
+	color: inherit;
+	margin-top: 5px;
+}
+.account-fixed-box .box .create-account{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.account-fixed-box .background{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+}
+.account-fixed-box .background img{
+	width: 100%;
+	height: 100%;
+}
+.account-fixed-box .box form .password-inp{
+	position: relative;
+}
+.account-fixed-box .box form .password-inp input{
+	width: 90%;
+	float: right;
+}
+.account-fixed-box .box form .password-inp i{
+	cursor: pointer;
+	font-size: 20px;
+	width: 10%;
+}
+@media screen and (max-width: 1300px) {
+	.account-fixed-box .box{
+		width: 40%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.account-fixed-box .box form .password-inp input{
+		width: 88%;
+	}
+	.account-fixed-box .box form .password-inp i{
+		width: 12%;
+	}
+	.account-fixed-box .box .name input{
+		width: 98%!important;
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.account-fixed-box .box{
+		width: 45%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.account-fixed-box .box{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.account-fixed-box .box{
+		width: 55%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.account-fixed-box .box{
+		width: 60%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.account-fixed-box .box{
+		width: 70%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.account-fixed-box .box{
+		width: 80%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.account-fixed-box .box{
+		width: 85%;
+	}
+}
+@media screen and (max-width: 300px) {
+	.account-fixed-box .box{
+		width: 95%;
+	}
+}
+@media screen and (max-width: 200px) {
+	.account-fixed-box .box{
+		width: 100%;
+	}
+}

@@ -1,0 +1,280 @@
+@font-face {
+	font-family: "shabnam";
+	src: url("../fonts/Shabnam-FD.ttf");
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #141316 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+body{
+	font-family: shabnam;
+	background:#141316;
+	margin: 0;
+	padding:0; 
+	direction: rtl;
+}
+
+.vertical-center{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.center{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.logo{
+	margin-right: 50px;
+	margin-top: 20px;
+	position: absolute;
+	width: 200px;
+	color: #fff;
+}
+.logo img{
+	width: 70%;
+}
+.display-none{
+	display: none;
+}
+.stories{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.stories .story-list{
+	position: relative;
+	width: 2000vw;
+	/*left: 466.5px;*/
+	/*left: 820px;*/
+	left: 10px;
+	height: 500px;
+}
+.stories .story-list .list{
+	position: absolute;
+	height: 100%;
+	right: 0;
+	transition: right .3s;
+}
+
+.stories .story-list .story{
+	user-select: none;
+	position: relative;
+	height: 50%;
+	width: 150px;
+	display: inline-block;
+	margin: 0 60px;
+	border-radius: 5px;
+	float: left;
+	transition: all .3s;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	overflow: hidden;
+}
+.stories .story-list .story .arrow-holder{
+	opacity: 0;
+	width: 100%;
+	color: #000;
+	font-size: 14px;
+	font-weight: 900;
+	transition: all .3s;
+}
+.stories .story-list .story:first-child .left{
+	display: none;
+}
+.stories .story-list .story:last-child .right{
+	display: none;
+}
+.stories .story-list .active .arrow-holder{
+	opacity: 1;
+	z-index: 100;
+}
+.stories .story-list .story .arrow-holder i{
+	padding: 5px;
+	background: #434345;
+	border-radius: 100%;
+	cursor: pointer;
+}
+.stories .story-list .story .arrow-holder .right{
+	position: absolute;
+	right: -40px;
+}
+.stories .story-list .story .arrow-holder .left{
+	position: absolute;
+	left: -40px;
+}
+.stories .story-list .story .click{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.stories .story-list .story img{
+	width: 100%;
+	height: 100%;
+	/*object-fit: cover;*/
+	border-radius: inherit;
+}
+.stories .story-list .list .active{
+	width: 318px;
+	height: 100%;
+	filter: unset;
+	overflow: unset;
+}
+.stories .story-list .list .story .head{
+	display: none;
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	color: #fff;
+}
+.stories .story-list .list .active .head{
+	display: inline-block;
+
+}
+.stories .story-list .list .story .head .info{
+	position: relative;
+	width: 90%;
+	display: block;
+	margin: auto;
+	/*top: 20px;*/
+	margin-right: 5%;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.stories .story-list .list .story .head .info span:first-child{
+	margin-left: 15px;
+}
+.stories .story-list .list .story .head .info span:first-child:after{
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background: #fff;
+	margin-right: 5px;
+	margin-top: 7px;
+	border-radius: 100%;
+}
+.stories .story-list .list .story .head .info .exit{
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	background: #AC98A6;
+	color: #29001D;
+	font-weight: 900;
+	font-size: 14px;
+	float: left;
+	cursor: pointer;
+	z-index: 2;
+}
+.stories .story-list .list .active .timeline{
+	display: block;
+}
+.stories .story-list .list .story .bottom{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	width: 90%;
+	direction: ltr;
+	color: #fff;
+	font-size: 26px;
+	right: 5%;
+	cursor: pointer;
+	font-family: shabnam;
+}
+.stories .story-list .list .active .bottom{
+	display: inline-block;
+}
+.stories .story-list .list .story .bottom .more ,.stories .story-list .list .story .bottom .like{
+	display: inline-block;
+	position: relative;
+}
+.stories .story-list .list .story .bottom .more .more-box{
+	width: 120px;
+	background: #141316;
+	position: absolute;
+	bottom: 120%;
+	border-radius: 2px;
+	font-size: 14px;
+	padding: 0 10px;
+	font-family: shabnam;
+	padding-top: 4px;
+}
+.stories .story-list .list .story .bottom .more .more-box .more-btn{
+	width: 100%;
+	padding: 10px 0;
+	direction: rtl;
+}
+.stories .story-list .list .story .bottom .more .more-box .more-btn i{
+	font-size: 18px;
+}
+.stories .story-list .list .story .bottom .more .more-box .more-btn span{
+	margin-right: 10px;
+	font-weight: unset;
+	position: relative;
+	top: -5px;
+}
+.stories .story-list .list .story .bottom .like span{
+	font-size: 16px;
+	float: right;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+.timeline{
+    width: 90%;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    background: #9000FF;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    top: 10px;
+}
+  
+.timeline .beffor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #B4BAB8;
+    left: 0;
+    animation: animate 5s linear;
+}
+  
+@keyframes animate {
+	0% {
+        left: 0%;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+	.stories .story-list .story .arrow-holder{
+		opacity: .7;
+		color: #fff;
+	}
+	.stories .story-list .story .arrow-holder .right{
+		position: absolute;
+		right: 10px;
+	}
+	.stories .story-list .story .arrow-holder .left{
+		position: absolute;
+		left: 10px;
+	}
+}
